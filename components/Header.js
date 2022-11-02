@@ -43,6 +43,7 @@ export default function Header() {
         />
       </div>
       <Image
+        alt="logo"
         src="https://links.papareact.com/ua6"
         width={200}
         height={150}

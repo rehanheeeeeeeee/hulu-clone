@@ -19,7 +19,6 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function Home({ movies }) {
-  console.log(movies);
   return (
     <div>
       <Head>

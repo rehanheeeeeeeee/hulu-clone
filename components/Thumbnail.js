@@ -17,6 +17,7 @@ const Thumbnail = ({ movie }, ref) => {
   return (
     <div className="flex flex-col group cursor-pointer p-2 transition-transform ease-in sm:hover:scale-105 hover:z-50">
       <Image
+        alt="movie"
         src={`https://image.tmdb.org/t/p/original/${
           backdrop_path || poster_path
         }`}
