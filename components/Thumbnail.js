@@ -2,7 +2,7 @@ import { HandThumbUpIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React, { forwardRef } from "react";
 
-const Thumbnail = forwardRef(({ movie }, ref) => {
+const Thumbnail = ({ movie }, ref) => {
   const {
     poster_path,
     backdrop_path,
@@ -15,10 +15,7 @@ const Thumbnail = forwardRef(({ movie }, ref) => {
     vote_count,
   } = movie;
   return (
-    <div
-      ref={ref}
-      className="flex flex-col group cursor-pointer p-2 transition-transform ease-in sm:hover:scale-105 hover:z-50"
-    >
+    <div className="flex flex-col group cursor-pointer p-2 transition-transform ease-in sm:hover:scale-105 hover:z-50">
       <Image
         src={`https://image.tmdb.org/t/p/original/${
           backdrop_path || poster_path
@@ -41,5 +38,5 @@ const Thumbnail = forwardRef(({ movie }, ref) => {
       </p>
     </div>
   );
-});
+};
 export default Thumbnail;
